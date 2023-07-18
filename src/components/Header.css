@@ -1,0 +1,27 @@
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.logo {
+    grid-column: 3 / 5;
+    display: grid;
+    place-items: center;
+}
+
+nav {
+    grid-column: 5 / 11;
+    display: grid;
+}
+
+@media screen and (max-width: 860px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: 0 20px;
+        padding: 20px 0 0 0;
+    }
+}

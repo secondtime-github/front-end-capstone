@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer>
             <img
-                src="/Logo.svg"
+                src={process.env.PUBLIC_URL + "/Logo.svg"}
                 alt="Logo"
             />
 

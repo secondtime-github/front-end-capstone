@@ -1,7 +1,11 @@
+import Hero from "./Hero";
+import Highlights from "./Highlights";
+
 const Main = () => {
     return (
         <main>
-            Main
+            <Hero />
+            <Highlights />
         </main>
     );
 }
