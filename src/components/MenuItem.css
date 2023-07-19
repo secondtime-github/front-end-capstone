@@ -1,0 +1,58 @@
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #EDEFEE;
+}
+
+.menu-item-image {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu-item-content {
+    padding: 20px;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 40px;
+}
+
+.menu-item-title {
+    color: #333333;
+    font-family: 'Markazi Text';
+    font-size: 18pt;
+    margin: 0;
+}
+
+.menu-item-price {
+    color: #EE9972;
+    font-family: 'Markazi Text';
+    font-size: 18pt;
+    margin: 0;
+}
+
+.menu-item-description {
+    min-height: 180px;
+    color: grey;
+    font-size: 12pt;
+    font-family: 'Karla';
+    margin: 0;
+}
+
+.menu-item-footer {
+    display: flex;
+    align-items: center;
+    color: #333333;
+    font-weight: bold;
+}
+
+.menu-item-delivery-icon {
+    width: auto;
+    height: 15px;
+    margin-left: 5px;
+}

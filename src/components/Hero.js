@@ -1,4 +1,5 @@
 import './Hero.css'
+import YellowButton from './YellowButton';
 
 const Hero = () => {
     return (
@@ -10,7 +11,7 @@ const Hero = () => {
                     We are a family owned Mediterranean restaurant,
                     focused on traditional recipes served with a modern twist.
                 </p>
-                <button>Reserve a Table</button>
+                <YellowButton text='Reserve a Table' />
             </div>
 
             <div className='hero-image'>

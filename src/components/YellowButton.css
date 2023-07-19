@@ -1,0 +1,10 @@
+.yellow-button {
+    background-color: #F4CE14;
+    border: none;
+    color: #333333;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+}
