@@ -1,0 +1,22 @@
+.booking-page {
+    background-color: #495E57;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 860px) {
+    .booking-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+form {
+    grid-column: 3 / 11;
+    display: grid;
+    max-width: 200px;
+    gap: 20px;
+}

@@ -13,7 +13,6 @@ const Nav = () => {
                 <li><Link to="/">Login</Link></li>
             </ul>
         </nav>
-
     );
 }
 
