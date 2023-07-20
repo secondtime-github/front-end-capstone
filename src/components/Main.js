@@ -1,11 +1,14 @@
-import Hero from "./Hero";
-import Highlights from "./Highlights";
+import HomePage from '../pages/HomePage';
+import BookingPage from '../pages/BookingPage';
+import { Routes, Route } from "react-router-dom";
 
 const Main = () => {
     return (
         <main>
-            <Hero />
-            <Highlights />
+            <Routes>
+                <Route path="/" element={<HomePage />}></Route>
+                <Route path="/booking" element={<BookingPage />}></Route>
+            </Routes>
         </main>
     );
 }
