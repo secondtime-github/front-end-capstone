@@ -6,7 +6,7 @@ const menuItems = [
     {
         title: "Greek salad",
         description: "The famous greek salad of crispy lettuce, peppers, olivers and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons",
-        imageSrc: process.env.PUBLIC_URL + "/greek salad.jpg",
+        imageSrc: process.env.PUBLIC_URL + "/Greek salad.png",
         price: 12.99,
     },
     {
