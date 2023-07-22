@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './BookingForm.css'
 
-const BookingForm = ({ availableTimes, dispatch }) => {
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [guests, setGuests] = useState('');
@@ -17,6 +17,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
         event.preventDefault();
         const bookingDetails = { date, time, guests, occasion };
         console.log(bookingDetails);
+        submitForm();
     };
 
     return (
@@ -63,7 +64,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
                 <option value="Anniversary">Anniversary</option>
             </select>
 
-            <button>Make Your Reservation</button>
+            <input type="submit" value="Make Your reservation"></input>
         </form>
     );
 }

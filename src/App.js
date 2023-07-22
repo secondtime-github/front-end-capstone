@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ConfirmedBooking from './booking/ConfirmedBooking';
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/booking" element={<BookingPage />}></Route>
+        <Route path="booking/*" element={<BookingPage />}>
+          <Route path="confirm" element={<ConfirmedBooking />}></Route>
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>
