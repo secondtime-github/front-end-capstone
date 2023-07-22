@@ -59,3 +59,13 @@ input[type='submit'] {
     color: #333333;
     cursor: pointer;
 }
+
+input[type="submit"]:disabled {
+    background-color: #EDEFEE;
+    color: gray;
+    cursor: not-allowed;
+}
+
+.error {
+    color: #EE9972;
+}
