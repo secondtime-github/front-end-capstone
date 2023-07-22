@@ -1,12 +1,10 @@
-import BookingForm from "../form/BookingForm";
+import Main from "../booking/Main";
 
 const BookingPage = () => {
     return (
-        <>
-            <section className="booking-page">
-                <BookingForm />
-            </section>
-        </>
+        <main>
+            <Main />
+        </main>
     );
 }
 

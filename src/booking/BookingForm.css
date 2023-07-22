@@ -1,0 +1,61 @@
+.booking-page {
+    background-color: #495E57;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 860px) {
+    .booking-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+form {
+    grid-column: 3 / 7;
+    display: grid;
+    /* max-width: 200px; */
+    gap: 10px;
+    padding: 20px;
+}
+
+form h1 {
+    font-size: 40pt;
+    color: #F4CE14;
+    font-family: 'Markazi Text';
+    margin: 0;
+}
+
+label {
+    font-size: 12pt;
+    color: #EDEFEE;
+    font-family: 'Karla';
+}
+
+input {
+    font-size: 12pt;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #EDEFEE;
+}
+
+select {
+    font-size: 12pt;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #EDEFEE;
+}
+
+button {
+    font-size: 12pt;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #F4CE14;
+    color: #333333;
+    cursor: pointer;
+}

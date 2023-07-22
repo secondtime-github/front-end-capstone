@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './BookingForm.css'
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, dispatch }) => {
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [guests, setGuests] = useState('');
     const [occasion, setOccasion] = useState('');
 
-    const [availableTimes] = useState(['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']);
+    useEffect(() => {
+        if (date.length > 0) {
+            dispatch({ type: 'CHOOSE_DATE', date: date });
+        }
+    }, [date, dispatch]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -17,6 +21,8 @@ const BookingForm = () => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h1>Reservations</h1>
+
             <label htmlFor="res-date">Choose date</label>
             <input
                 type="date"
@@ -57,7 +63,7 @@ const BookingForm = () => {
                 <option value="Anniversary">Anniversary</option>
             </select>
 
-            <input type="submit" value="Make Your Reservation" />
+            <button>Make Your Reservation</button>
         </form>
     );
 }
