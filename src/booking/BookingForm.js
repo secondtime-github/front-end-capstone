@@ -25,17 +25,16 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             if (!values.time) {
                 errors.time = 'Required';
             }
-            if (!values.guests) {
-                errors.guests = 'Required';
-            } else if (values.guests < 1 || values.guests > 10) {
+            if (values.guests < 1 || values.guests > 10) {
                 errors.guests = 'Guests must be between 1 and 10';
+            } else if (!values.guests) {
+                errors.guests = 'Required';
             }
             if (!values.occasion) {
                 errors.occasion = 'Required';
             }
             return errors;
         },
-        validateOnMount: true,
     });
 
     useEffect(() => {
@@ -61,6 +60,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                 type="date"
                 id="res-date"
                 {...formik.getFieldProps('date')}
+                required
             />
             {formik.touched.date && formik.errors.date ? (
                 <div className='error'>{formik.errors.date}</div>
@@ -70,6 +70,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             <select
                 id="res-time"
                 {...formik.getFieldProps('time')}
+                required
             >
                 {availableTimes.map((time, index) => (
                     <option key={index} value={time}>{time}</option>
@@ -85,6 +86,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                 id="guests"
                 placeholder='1'
                 {...formik.getFieldProps('guests')}
+                required
             />
             {formik.touched.guests && formik.errors.guests ? (
                 <div className='error'>{formik.errors.guests}</div>
@@ -94,6 +96,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             <select
                 id='occasion'
                 {...formik.getFieldProps('occasion')}
+                required
             >
                 <option value="Birthday">Birthday</option>
                 <option value="Anniversary">Anniversary</option>
@@ -106,6 +109,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
                 type="submit"
                 value="Make Your reservation"
                 disabled={!formik.isValid || formik.isSubmitting}
+                aria-label='On Click'
             />
         </form>
     );

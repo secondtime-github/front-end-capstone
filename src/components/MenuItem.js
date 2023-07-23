@@ -3,7 +3,7 @@ import './MenuItem.css';
 
 const MenuItem = ({ title, description, imageSrc, price }) => {
     return (
-        <div className='menu-item'>
+        <section className='menu-item'>
             <img
                 className='menu-item-image'
                 src={imageSrc}
@@ -24,7 +24,7 @@ const MenuItem = ({ title, description, imageSrc, price }) => {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

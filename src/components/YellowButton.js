@@ -3,7 +3,10 @@ import './YellowButton.css';
 
 const YellowButton = ({ text }) => {
     return (
-        <button className="yellow-button">
+        <button
+            className="yellow-button"
+            aria-label='On Click'
+        >
             {text}
         </button>
     );
